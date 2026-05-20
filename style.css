@@ -1,0 +1,441 @@
+/* ------------------------------
+   Perustyylit
+--------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #333333;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ------------------------------
+   tässä navigaatio
+--------------------------------*/
+.navbar-brand.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px !important;   /* desktop */
+  color: #d47aa8 !important;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand.brand-title {
+    font-size: 20px !important; /* mobiili */
+  }
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #333 !important;
+}
+
+/* ------------------------------
+   Donitsit sataa
+--------------------------------*/
+#donitsi-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.donitsi-fall {
+  position: absolute;
+  top: -120px;
+  width: 40px;
+  animation: fall linear infinite;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-150px) rotate(0deg); }
+  100% { transform: translateY(120vh) rotate(360deg); }
+}
+
+/* ------------------------------
+   etusivulle otsikko kaari
+--------------------------------*/
+.title-wrapper {
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.arc-title {
+  width: 100%;
+  max-width: 600px;
+}
+
+.arc-title text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  fill: #333333;
+}
+
+@media (max-width: 600px) {
+  .arc-title text {
+    font-size: 48px;
+  }
+}
+
+/* ------------------------------
+   Hero kuva
+--------------------------------*/
+.hero-img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 10;
+}
+
+.hero-subtitle {
+  text-align: center;
+  font-size: 26px;
+  color: #555555;
+  margin-top: -10px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ------------------------------
+   Napit
+--------------------------------*/
+.hero-btn,
+.btn-primary {
+  background-color: #f7c9dd;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 14px 32px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover,
+.btn-primary:hover {
+  background-color: #f3b3d0;
+}
+.hero-btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;   /* tämä keskittää napin */
+  padding: 14px 32px;
+  background: #f7c9dd;
+  color: #333;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #f3b3d0;
+}
+
+/* ------------------------------
+   Footer hommat
+--------------------------------*/
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #333333;
+  margin-top: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ------------------------------
+   Pinkit boxit
+--------------------------------*/
+.pink-box,
+.pink-card {
+  background-color: #fde6f1;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pink-card:hover {
+  background-color: #f9d1e7;
+}
+
+/* ------------------------------
+   Keitä me olemme
+--------------------------------*/
+.about-img {
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------
+   Galleryn kortit
+--------------------------------*/
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: #fde6f1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  background-color: #f9d1e7;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.scrunchie-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  text-align: center;
+  color: #c06b8e;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrunchie-desc {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card .btn {
+  margin-top: auto;
+}
+
+/* ------------------------------
+   Ole yhteydessä
+--------------------------------*/
+.contact-box {
+  background-color: #fde6f1;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Donitsi taustalla, siksak */
+.zigzag-donut,
+.index-donut {
+  position: fixed;
+  width: 180px;
+  top: 0;
+  left: 0;
+  opacity: 0.95;
+  z-index: -1;
+  pointer-events: none;
+  animation: zigzag 12s linear infinite;
+}
+
+@keyframes zigzag {
+  0%   { transform: translate(0vw, 0vh); }
+  20%  { transform: translate(70vw, 10vh); }
+  40%  { transform: translate(10vw, 40vh); }
+  60%  { transform: translate(80vw, 60vh); }
+  80%  { transform: translate(20vw, 85vh); }
+  100% { transform: translate(0vw, 0vh); }
+}
+.hero-btn {
+  display: block;
+  margin: 30px auto;
+}
+/* Galleria – korttien tasaukset */
+.scrunchie-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #c06b8e;
+  text-align: center;
+
+  min-height: 70px;          /* sama korkeus nimille */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrunchie-desc {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+  min-height: 140px;         /* sama korkeus kuvauksille */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Galleria – pakotetaan nimet ja kuvaukset linjaan */
+.scrunchie-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #c06b8e;
+  text-align: center;
+
+  min-height: 70px !important;     /* sama korkeus nimille */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.scrunchie-desc {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+  min-height: 140px !important;    /* sama korkeus kuvauksille */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+/* Index-sivun hero-kuvan mobiilivälit – mitään muuta ei muuteta */
+@media (max-width: 576px) {
+  .hero-img {
+    max-width: 90%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+  }
+}
+@media (max-width: 576px) {
+  .hero-img {
+    background: rgba(255, 255, 255, 0.6); /* pehmeämpi */
+  }
+}
+/* SOME-ikonit */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+}
+
+  /* Galleria – korttien sama korkeus */
+.pink-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pink-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* SOME-ikonien väri ja etäisyys */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* enemmän väliä tarkista */
+  margin-bottom: 20px; 
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #f7c9dd; /* vaaleanpunainen */
+  color: #c06b8e; /* tumma pinkki ikonille tarkista */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #f3b3d0;
+  transform: translateY(-3px);
+}
+.social-icons {
+  margin: 20px 0;
+}
+/* Galleria – korttien sama korkeus */
+.pink-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.pink-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrunchie-name {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrunchie-desc {
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card .btn {
+  margin-top: auto;
+}
+/* Galleria – pakotetaan nimi + kuvaus + nappi kortin alaosaan */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  flex-grow: 1;
+}
+
+.scrunchie-name {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrunchie-desc {
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card .btn {
+  margin-top: auto; 
+}
